@@ -1,0 +1,154 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.main {}
+
+
+/* global declaration css for svg */
+
+svg {
+  width:400px;
+  background-color: #87F2B7;
+}
+
+rect {
+  fill: #4D4D4D;
+  width: 24.739px;
+  height: 1.096px;
+}
+
+ellipse {
+  fill: #4D4D4D;
+}
+
+circle {
+  stroke: #FFF;
+}
+
+path {
+  fill: #535754;
+}
+
+image {
+  width: 97px;
+  height: 93px;
+}
+
+
+/* keyframes for fadeIn, rotation, dash and fadeUp */
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dotRotation {
+  from {
+    transform: rotate(0deg) translate(152px) rotate(0deg);
+    /* opacity: 1; */
+  }
+  to {
+    transform: rotate(380deg) translate(152px) rotate(-380deg);
+  }
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(20%);
+      
+    opacity: 0;
+    
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    
+  }
+}
+
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fade-in.four {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.circ-loader {
+  fill: #FFF;
+  animation: dotRotation 2s ease-in-out forwards;
+  animation-delay: -0.2s;
+}
+
+.bkg-circ-loader {
+  fill: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2s ease-in-out forwards;
+  
+}
+.pop {
+  opacity: 0;
+  animation: fadeUp 0.5s 1.2s forwards;
+}
+
+.up {
+  opacity: 0;
+  fill: #FFF;
+  animation: fadeUp 0.5s 1.2s forwards;
+}
