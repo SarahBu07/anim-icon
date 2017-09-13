@@ -10,145 +10,147 @@ html {
 /* global declaration css for svg */
 
 svg {
-  width:400px;
   background-color: #87F2B7;
 }
 
-rect {
-  fill: #4D4D4D;
-  width: 24.739px;
-  height: 1.096px;
-}
-
-ellipse {
-  fill: #4D4D4D;
-}
-
-circle {
-  stroke: #FFF;
-}
-
-path {
-  fill: #535754;
-}
-
-image {
-  width: 97px;
-  height: 93px;
-}
-
-
-/* keyframes for fadeIn, rotation, dash and fadeUp */
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes dotRotation {
-  from {
-    transform: rotate(0deg) translate(152px) rotate(0deg);
-    /* opacity: 1; */
-  }
-  to {
-    transform: rotate(380deg) translate(152px) rotate(-380deg);
-  }
+.titles {
+  fill="#4D4D4D";
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
 }
 
 @keyframes dash {
-    to {
+  0%{opacity: 0;}
+  80%{opacity: 1;}
+  to {opacity: 1;
       stroke-dashoffset: 0;
   }
 }
+.bkg-circles {
+  stroke:#fff;
+  fill:none;
+  opacity:0.9;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+}
+.bkgCirc1{
+  animation: dash 1.4s ease-in-out forwards;
+}
+.bkgCirc2 {
+  animation: dash 1.4s ease-in-out forwards;
+  animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+.bkgCirc3 {
+  animation: dash 1.4s ease-in-out forwards;
+  animation-delay: 1.1s;
+  -moz-animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+}
+.bkgCirc4 {
+  animation: dash 1.4s ease-in-out forwards;
+  animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+}
+.bkgCirc5 {
+  animation: dash 1.4s ease-in-out forwards;
+  animation-delay: 1.9s;
+  -moz-animation-delay: 1.9s;
+  -webkit-animation-delay: 1.9s;
+}
+.bkgCirc6 {
+  animation: dash 1.4s ease-in-out forwards;
+  animation-delay: 2.2s;
+  -moz-animation-delay: 2.2s;
+  -webkit-animation-delay: 2.2s;
+}
 
-@keyframes fadeUp {
-  from {
-    transform: translateY(20%);
-      
+
+/* satellite */
+.satellites {
+  fill: #D9FDE2;
+}
+
+@keyframes dotRotation1 {
+ 0% {
     opacity: 0;
-    
+      transform: rotate(0deg) translate(95px) rotate(0deg);
   }
-  to {
-    transform: translateY(0);
+  60%{ opacity: 1;}
+  100% {
     opacity: 1;
-    
+    transform: rotate(380deg) translate(95px) rotate(-380deg);
+  }
+}
+@-webkit-keyframes dotRotation1 {
+  0% {
+    opacity: 0;
+      transform: rotate(0deg) translate(95px) rotate(0deg);
+  }
+  60%{ opacity: 1;}
+  100% {
+    opacity: 1;
+    transform: rotate(380deg) translate(95px) rotate(-380deg);
+  }
+}
+  
+.satellite1{
+  
+  animation: dotRotation1 1.4s ease-in-out forwards;
+  animation-delay: 0;
+}
+
+@keyframes dotRotation2 {
+ 0% {
+    opacity: 0;
+      transform: rotate(-60deg) translate(95px) rotate(60deg);
+  }
+  60%{ opacity: 1;}
+  100% {
+    opacity: 1;
+    transform: rotate(330deg) translate(95px) rotate(-330deg);
+  }
+}
+@-webkit-keyframes {}
+
+@keyframes dotRotation3 {
+ 0% {
+    opacity: 0;
+      transform: rotate(-190deg) translate(95px) rotate(190deg);
+  }
+  60%{ opacity: 1;}
+  100% {
+    opacity: 1;
+    transform: rotate(130deg) translate(95px) rotate(-130deg);
   }
 }
 
-
-.fade-in {
+.satellite2{
   opacity: 0;
-  /* make things invisible upon start */
-  -webkit-animation: fadeIn ease-in 1;
-  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
-  -moz-animation: fadeIn ease-in 1;
-  animation: fadeIn ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
+  animation: dotRotation2 1.4s ease-in-out forwards;
+  animation-delay: 0.4s;
 }
-
-.fade-in.four {
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay: 1.2s;
-  animation-delay: 1.2s;
-}
-
-.circ-loader {
-  fill: #FFF;
-  animation: dotRotation 2s ease-in-out forwards;
-  animation-delay: -0.2s;
-}
-
-.bkg-circ-loader {
-  fill: none;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 2s ease-in-out forwards;
-  
-}
-.pop {
+.satellite3{
   opacity: 0;
-  animation: fadeUp 0.5s 1.2s forwards;
+  animation: dotRotation3 1.4s ease-in-out forwards;
+  animation-delay: 1.1s;
 }
 
-.up {
+.satellite4{
   opacity: 0;
-  fill: #FFF;
-  animation: fadeUp 0.5s 1.2s forwards;
+  animation: dotRotation1 1.4s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+.satellite5{
+  opacity: 0;
+  animation: dotRotation2 1.4s ease-in-out forwards;
+  animation-delay: 1.9s;
+}
+.satellite6{
+  opacity: 0;
+  animation: dotRotation3 1.4s ease-in-out forwards;
+  animation-delay: 2.2s;
 }
