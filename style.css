@@ -13,16 +13,23 @@ svg{
   background-color: #87F2B7;
   padding: 60px 60px;
 }
-
+.container{
+  margin: auto;
+}
 @media (min-width:1200px) {
-  svg{
+  .container{
   width:680px;
   height: auto;
 }
 }
 @media (min-width:768px) and (max-width:1200px) {
-  svg{
-  width:510px;
+  .container{
+  width:610px;
+}
+}
+@media (max-width:768px) {
+  .container{
+  width:400px;
 }
 }
 
