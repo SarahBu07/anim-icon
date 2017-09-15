@@ -15,7 +15,7 @@ svg {
 
 .titles, text, tspan {
   font-size:13px;
-  fill="#4D4D4D";
+  fill: #4D4D4D;
   font-family: 'Muli', sans-serif;
   text-transform: uppercase;
 }
