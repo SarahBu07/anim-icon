@@ -39,8 +39,8 @@ svg{
   fill: #4D4D4D;
 }
 
-#titles {
-  font-family: 'Muli-Regular', sans-serif;
+#titles, text, tspan {
+  font-family: 'Muli', sans-serif;
   font-size: 13px;
   text-transform: uppercase;
 }
