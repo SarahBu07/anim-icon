@@ -39,7 +39,7 @@ svg{
   fill: #4D4D4D;
 }
 
-#titles, text, tspan {
+.titles {
   font-family: 'Muli', sans-serif;
   font-size: 13px;
   text-transform: uppercase;
@@ -302,12 +302,11 @@ svg{
   fill: #FFFFFF;
 }
 
-
 /* FadeInUp Animation */
 
 @keyframes fadeInUp {
   from {
-    transform: translate3d(0, 40px, 0)
+    transform: translate3d(0px, 40px, 0px)
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -317,7 +316,7 @@ svg{
 
 @-webkit-keyframes fadeInUp {
   from {
-    transform: translate3d(0, 40px, 0)
+    transform: translate3d(0px, 40px, 0px)
   }
   to {
     transform: translate3d(0, 0, 0);
