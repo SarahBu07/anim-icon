@@ -306,20 +306,20 @@ svg{
 
 @keyframes fadeInUp {
   from {
-    transform: translate3d(0px, 40px, 0px)
+    transform: translate(0px, 40px)
   }
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0);
     opacity: 1
   }
 }
 
 @-webkit-keyframes fadeInUp {
   from {
-    transform: translate3d(0px, 40px, 0px)
+    transform: translate(0px, 40px)
   }
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0);
     opacity: 1
   }
 }
